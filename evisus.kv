@@ -1,0 +1,1226 @@
+
+<Gerenciador>:
+    Menu:
+        name: 'menu'
+    Gestor:
+        name: 'gestor'
+    Pesquisador:
+        name: 'pesquisador'
+    Profsaude:
+        name: 'profsaude'
+    Boletins:
+        name: 'boletins'
+    Prod:
+        name: 'prod'
+    Indicadores:
+        name: 'indicadores'
+    Recomend:
+        name: 'recomend'
+    Orient:
+        name: 'orient'
+    Recursos:
+        name: 'recursos'
+    Lacunas:
+        name: 'lacunas'
+    Protdir:
+        name: 'protdir'
+    Mapeamento:
+        name: 'mapeamento'
+    Atualiza:
+        name: 'atualiza'
+    Recomendcat:
+        name: 'recomendcat'
+    Recomendpc:
+        name: 'recomendpc'
+    Recomendcat1:
+        name: 'recomendcat1'
+    Recomendcat2:
+        name: 'recomendcat2'
+    Recomendcat3:
+        name: 'recomendcat3'
+    Recomendcat4:
+        name: 'recomendcat4'
+    Recomendcat5:
+        name: 'recomendcat5'
+    Recomendcat6:
+        name: 'recomendcat6'
+    Recomendcat7:
+        name: 'recomendcat7'
+    Recomendcat8:
+        name: 'recomendcat8'
+    Recomendcat9:
+        name: 'recomendcat9'
+    Recomendcat10:
+        name: 'recomendcat10'
+    Recomendcat11:
+        name: 'recomendcat11'
+    Recomendcat12:
+        name: 'recomendcat12'
+    Recomendcat13:
+        name: 'recomendcat13'
+    Recomendcat14:
+        name: 'recomendcat14'
+    Recomendcat15:
+        name: 'recomendcat15'
+    Recomendcat16:
+        name: 'recomendcat16'
+    Recomendcat17:
+        name: 'recomendcat17'
+    Recomendcat18:
+        name: 'recomendcat18'
+    Recomendcat19:
+        name: 'recomendcat19'
+    Recomendcat20:
+        name: 'recomendcat20'
+    Recomendcat21:
+        name: 'recomendcat21'
+    Recomendcat22:
+        name: 'recomendcat22'
+    Recomendcat23:
+        name: 'recomendcat23'
+    Recomendcat24:
+        name: 'recomendcat24'
+    Recomendcat25:
+        name: 'recomendcat25'
+    Recomendcat26:
+        name: 'recomendcat26'
+<Menu>:
+    BoxLayout:
+        orientation:'vertical'
+        padding:[100, 150, 100, 100]
+        spacing:40
+        canvas:
+            Color:
+                rgba:1,1,1,1
+            Rectangle:
+                size:self.size
+                pos:self.pos
+                source:'frame.png'
+        Label:
+            text: 'Você é:'
+            font_size:18
+            color: 43/255,114/255,184/255
+        Button:
+            text:'Gestor'
+            background_normal: ''
+            background_color: 43/255,114/255,184/255
+            on_release:app.root.current = 'gestor'
+        Button:
+            text:'Pesquisador'
+            background_normal: ''
+            background_color: 43/255,114/255,184/255
+            on_release:app.root.current = 'pesquisador'
+        Button:
+            text:'Profissional de saúde'
+            background_normal: ''
+            background_color: 43/255,114/255,184/255
+            on_release:app.root.current = 'profsaude'
+
+<Gestor>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            pos_hint: {'top':1}
+            background_color: 15/255,97/255,170/255, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'CANAL DO GESTOR'
+                    on_release:app.root.current = 'menu'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                Button:
+                    text: 'Recomendações (Pesquisa Saúde)'
+                    background_normal: 'buttonbg.png'
+                    color: 15/255,97/255,170/255
+                    text_size: self.width * 0.9, self.height
+                    halign: 'center'
+                    valign: 'center'
+                    on_release:app.root.current = 'recomend'
+                Button:
+                    text: 'Prioridades e indicadores em saúde'
+                    background_normal: 'buttonbg.png'
+                    color: 15/255,97/255,170/255
+                    text_size: self.width * 0.9, self.height
+                    halign: 'center'
+                    valign: 'center'
+                    on_release:app.root.current = 'indicadores'
+                Button:
+                    text: 'Produção ambulatorial e hospitalar'
+                    background_normal: 'buttonbg.png'
+                    color: 15/255,97/255,170/255
+                    text_size: self.width * 0.9, self.height
+                    halign: 'center'
+                    valign: 'center'
+                    on_release:app.root.current = 'prod'
+                Button:
+                    text: 'Boletins epidemiológicos'
+                    background_normal: 'buttonbg.png'
+                    color: 15/255,97/255,170/255
+                    text_size: self.width * 0.9, self.height
+                    halign: 'center'
+                    valign: 'center'
+                    on_release:app.root.current = 'boletins'
+<Pesquisador>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            background_color: 15/255,97/255,170/255, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'CANAL DO PESQUISADOR'
+                    on_release:app.root.current = 'menu'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                Button:
+                    text: 'Orientações gerais'
+                    background_normal: 'buttonbg.png'
+                    color: 15/255,97/255,170/255
+                    text_size: self.width * 0.9, self.height
+                    halign: 'center'
+                    valign: 'center'
+                    on_release:app.root.current = 'orient'
+                Button:
+                    text: 'Recursos disponíveis'
+                    background_normal: 'buttonbg.png'
+                    color: 15/255,97/255,170/255
+                    text_size: self.width * 0.9, self.height
+                    halign: 'center'
+                    valign: 'center'
+                    on_release:app.root.current = 'recursos'
+                Button:
+                    text: 'Lacunas de conhecimento'
+                    background_normal: 'buttonbg.png'
+                    color: 15/255,97/255,170/255
+                    text_size: self.width * 0.9, self.height
+                    halign: 'center'
+                    valign: 'center'
+                    on_release:app.root.current = 'lacunas'
+<Profsaude>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            background_color: 15/255,97/255,170/255, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'CANAL DO PROFISSIONAL DE SAÚDE'
+                    on_release:app.root.current = 'menu'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                Button:
+                    text: 'Atualização técnico-científica'
+                    background_normal: 'buttonbg.png'
+                    color: 15/255,97/255,170/255
+                    text_size: self.width * 0.9, self.height
+                    halign: 'center'
+                    valign: 'center'
+                    on_release:app.root.current = 'atualiza'
+                Button:
+                    text: 'Mapeamento clínico-epidemiológico'
+                    background_normal: 'buttonbg.png'
+                    color: 15/255,97/255,170/255
+                    text_size: self.width * 0.9, self.height
+                    halign: 'center'
+                    valign: 'center'
+                    on_release:app.root.current = 'mapeamento'
+                Button:
+                    text: 'Protocolos e diretrizes'
+                    background_normal: 'buttonbg.png'
+                    color: 15/255,97/255,170/255
+                    text_size: self.width * 0.9, self.height
+                    halign: 'center'
+                    valign: 'center'
+                    on_release:app.root.current = 'protdir'
+
+<Boletins>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Boletins epidemiológicos'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'gestor'
+        ScrollView:
+            BoxLayout:
+                id: boletinsbox
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+<Prod>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Produção ambulatorial e hospitalar'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'gestor'
+        ScrollView:
+            BoxLayout:
+                id:boxprod
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                spacing:10
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                Label:
+                    text: 'Compreender o cenário de produção ambulatorial e hospitalar é crucial para orientar uma gestão assertiva dos serviços de saúde.\nObservação:dados disponibilizados para o nível nacional, no ano de 2022. Níveis estadual e municipal serão implementados posteriormente\n\nSelecione a modalidade que você deseja acessar:\n'
+                    text_size: self.width * 0.95, self.height * 0.95
+                    color: 21/255,54/255,89/255
+                    valign: 'top'
+                Button:
+                    id: prodamb
+                    text:'PRODUÇÃO AMBULATORIAL'
+                    background_normal: ''
+                    background_color: 43/255,114/255,184/255
+                    size_hint: 0.8, 0.2
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'PRODUÇÃO HOSPITALAR'
+                    background_normal: ''
+                    background_color: 43/255,114/255,184/255
+                    on_release:app.root.current = 'recomendpc'
+                    size_hint: 0.8, 0.2
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Widget:
+
+
+
+<Indicadores>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Indicadores de saúde'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'gestor'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+<Recomend>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Recomendações (Pesquisa Saúde)'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'gestor'
+        ScrollView:
+            BoxLayout:
+                id: recomendbox
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                spacing: 10
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                Label:
+                    text: 'Subsidiar uma gestão em saúde informada por evidências científicas de qualidade é um compromisso do DECIT. As recomendações abaixo são provenientes de estudos financiados pelo órgão.\n\n\n\nComo você deseja navegá-las?'
+                    text_size: self.width * 0.95, self.height * 0.95
+                    color: 21/255,54/255,89/255
+                    valign: 'top'
+                Button:
+                    text:'POR CATEGORIA'
+                    background_normal: ''
+                    background_color: 43/255,114/255,184/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.8, 0.2
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'POR PALAVRAS-CHAVE'
+                    background_normal: ''
+                    background_color: 43/255,114/255,184/255
+                    on_release:app.root.current = 'recomendpc'
+                    size_hint: 0.8, 0.2
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Widget:
+
+<Recomendcat>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Recomendações por categoria'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'recomend'
+        ScrollView:
+            BoxLayout:
+                id: recomendbox
+                orientation:'vertical'
+                size_hint_y:None
+                padding:[3, 3, 3, 3]
+                spacing: 3
+                height:root.height
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                Button:
+                    text:'Alimentação e nutrição'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat1'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Ambiente, trabalho e saúde'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat2'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Assistência farmacêutica'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat3'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Avaliação de tecnologias e economia da saúde'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Bioética e ética na pesquisa'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Complexo produtivo da saúde'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Comunicação e informação em saúde'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Desenvolvimento de tecnologias em saúde'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Doenças crônicas não transmissíveis'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Doenças transmissíveis'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Economia e gestão em saúde'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Epidemiologia'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Gestão do trabalho e educação em saúde'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Pesquisa clínica'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Promoção da saúde'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Saúde bucal'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Saúde materno-infantil'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Saúde mental'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Saúde da criança e do adolescente'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Saúde da mulher'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Saúde da pessoa com deficiência'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Saúde da população negra'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Saúde do idoso'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Saúde dos povos indígenas'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Sistemas, programas e políticas em saúde'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+                Button:
+                    text:'Violência, acidentes e trauma'
+                    background_normal: ''
+                    background_color:15/255,97/255,170/255
+                    on_release:app.root.current = 'recomendcat'
+                    size_hint: 0.9, 0.12
+                    valign: 'center'
+                    font_size:13
+                    text_size: self.width * 0.9, self.height
+                    pos_hint: {'center_x':0.5, 'center_y':0.5}
+<Recomendpc>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Recomendações por palavras-chave'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'recomend'
+        ScrollView:
+            BoxLayout:
+                id: recomendbox
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                spacing: 10
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+<Orient>:
+    BoxLayout:
+        id: caixa
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Orientações gerais'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'pesquisador'
+        ScrollView:
+            BoxLayout:
+                id: orientbox
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                spacing:20
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                Label:
+                    text: 'O Departamento de Ciência e Tecnologia da Secretaria de Ciência, Tecnologia, Inovação e Insumos Estratégicos em Saúde é o principal agente fomentador de conhecimentos científicos, tecnológicos e de inovação em saúde. Dentre as principais ações, destacam-se o fomento a estudos e pesquisas em saúde e a produção e o incentivo do uso do conhecimento científico e tecnológico nos processos de tomada de decisão em todos os níveis de gestão do SUS e, ainda, a articulação intersetorial com agências de fomento parceiras.'
+                    text_size: self.width * 0.95, self.height * 0.95
+                    valign: 'top'
+                    color: 21/255,54/255,89/255
+
+
+<Recursos>:
+    BoxLayout:
+        id: id1
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Recursos disponíveis'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'pesquisador'
+        ScrollView:
+            BoxLayout:
+                id: recursosbox
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+
+<Lacunas>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Lacunas de conhecimento'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'pesquisador'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+<Lacunas>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Lacunas de conhecimento'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'pesquisador'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+
+
+<Protdir>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Protocolos e diretrizes'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'profsaude'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+<Mapeamento>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Mapeamento clínico-epidemiológico'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'profsaude'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+<Atualiza>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Atualização técnico-científica'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'profsaude'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+<Recomendcat1>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Alimentação e nutrição'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'recomendcat'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                id:reccat1
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                spacing: 10
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+<Recomendcat2>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Alimentação e nutrição'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'recomendcat'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+<Recomendcat3>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Alimentação e nutrição'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'recomendcat'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+<Recomendcat4>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Alimentação e nutrição'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'recomendcat'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+<Recomendcat5>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Alimentação e nutrição'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'recomendcat'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+<Recomendcat6>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Alimentação e nutrição'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'recomendcat'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+<Recomendcat7>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Alimentação e nutrição'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'recomendcat'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+<Recomendcat8>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Alimentação e nutrição'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'recomendcat'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+<Recomendcat9>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Alimentação e nutrição'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'recomendcat'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+<Recomendcat10>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Alimentação e nutrição'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'recomendcat'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+<Recomendcat11>:
+    BoxLayout:
+        orientation:'vertical'
+        ActionBar:
+            size_hint_y: 0.07
+            background_color: 252/255.0,223/255.0,25/255.0, 1
+            background_image: ''
+            ActionView:
+                ActionPrevious:
+                    app_icon: ''
+                    title:'Alimentação e nutrição'
+                    color: 21/255,54/255,89/255
+                    on_release:app.root.current = 'recomendcat'
+        ScrollView:
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:root.height
+                padding:[30, 30, 30, 30]
+                canvas:
+                    Color:
+                        rgba: 237/255.0,237/255.0,237/255.0,1
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+
+
+<TreeViewButton>:
+    color: 15/255,97/255,170/255
+    background_normal: ''
+    background_color: 1,1,1,0
+
